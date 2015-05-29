@@ -6,23 +6,19 @@ var eslintTester = new ESLintTester(linter);
 
 
 var valid = [
-  '           ' +
   'class Foo {' +
   '}          '
   ,
-  '           ' +
   'class Foo {' +
   '  bar() {  ' +
   '  }        ' +
   '}          '
   ,
-  '                ' +
   'class Foo {     ' +
   '  static bar() {' +
   '  }             ' +
   '}               '
   ,
-  '           ' +
   'class Foo {' +
   '  bar() {  ' +
   '  }        ' +
@@ -40,19 +36,16 @@ var valid = [
 var message = 'no space between method name and parens';
 
 var invalid = [
-  '           ' +
   'class Foo {' +
   '  bar () { ' +
   '  }        ' +
   '}          '
   ,
-  '                 ' +
   'class Foo {      ' +
   '  static bar () {' +
   '  }              ' +
   '}                '
   ,
-  '           ' +
   'class Foo {' +
   '  bar () { ' +
   '  }        ' +
