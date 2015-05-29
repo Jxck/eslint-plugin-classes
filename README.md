@@ -53,6 +53,34 @@ class Foo {
 }
 ```
 
+### name
+
+- class name should start with upper case.
+- method name should start with lower case.
+
+The following patterns are considered warnings:
+
+```js
+class foo {
+}
+
+class Foo {
+  Bar () {
+  }
+}
+```
+
+The following patterns are not warnings:
+
+```js
+class Foo {
+}
+
+class Foo {
+  bar () {
+  }
+}
+```
 
 ## Usage
 
@@ -63,6 +91,7 @@ plugins:
 rules:
   # Plugins
   classes/space  : 2
+  classes/name   : [2, "class", "name"]
 ```
 
 ## License
