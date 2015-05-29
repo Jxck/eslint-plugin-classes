@@ -16,7 +16,7 @@ var valid = [
   };
 });
 
-var message = 'class name should start with upper case.';
+var klass = 'class name should start with upper case.';
 
 var invalid = [
   'class foo {' +
@@ -26,7 +26,7 @@ var invalid = [
     code: code,
     args: [ 1, 'class' ],
     ecmaFeatures: { classes: true },
-    errors: [{ message: message }]
+    errors: [{ message: klass }]
   };
 });
 
