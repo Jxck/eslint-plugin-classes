@@ -91,7 +91,7 @@ plugins:
 rules:
   # Plugins
   classes/space  : 2
-  classes/name   : [2, "class", "name"]
+  classes/name   : [2, "class", "method"]
 ```
 
 ## License
