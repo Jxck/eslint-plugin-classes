@@ -26,6 +26,14 @@ var valid = [
   '  buz() {  ' +
   '  }        ' +
   '}          '
+  ,
+  'class Foo {     ' +
+  '  get bar() {   ' +
+  '  }             ' +
+  '                ' +
+  '  set buz(a) {  ' +
+  '  }             ' +
+  '}               '
 ].map(function(code) {
   return {
     code: code,
@@ -53,6 +61,16 @@ var invalid = [
   '  buz() {  ' +
   '  }        ' +
   '}          '
+  ,
+  'class Foo {     ' +
+  '  get bar () {  ' +
+  '  }             ' +
+  '}               '
+  ,
+  'class Foo {     ' +
+  '  set bar (a) { ' +
+  '  }             ' +
+  '}               '
 ].map(function(code) {
   return {
     code: code,
