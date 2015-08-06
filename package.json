@@ -9,11 +9,11 @@
     "url": "https://github.com/Jxck/eslint-plugin-classes/issues"
   },
   "devDependencies": {
-    "eslint": "^0.21.2",
-    "eslint-plugin-arrow-function": "0.0.2",
+    "eslint": "^1.0.0",
+    "eslint-plugin-arrow-function": "1.0.0",
     "eslint-plugin-no-func-space": "0.0.4",
     "eslint-plugin-nodeca": "^1.0.3",
-    "eslint-tester": "^0.6.0",
+    "eslint-tester": "^0.8.2",
     "mocha": "^2.2.5"
   },
   "homepage": "https://github.com/Jxck/eslint-plugin-classes",

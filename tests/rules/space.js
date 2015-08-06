@@ -1,8 +1,9 @@
 'use strict';
 
-var linter = require('eslint').linter;
-var ESLintTester = require('eslint-tester');
-var eslintTester = new ESLintTester(linter);
+var rule = require('../../lib/rules/space'),
+    RuleTester = require('eslint').RuleTester;
+
+var ruleTester = new RuleTester();
 
 
 var valid = [
@@ -79,7 +80,7 @@ var invalid = [
   };
 });
 
-eslintTester.addRuleTest('./lib/rules/space', {
+ruleTester.run('classes/space', rule, {
   valid: valid,
   invalid: invalid
 });

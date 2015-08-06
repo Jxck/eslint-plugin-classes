@@ -1,8 +1,9 @@
 'use strict';
 
-var linter = require('eslint').linter;
-var ESLintTester = require('eslint-tester');
-var eslintTester = new ESLintTester(linter);
+var rule = require('../../lib/rules/name'),
+    RuleTester = require('eslint').RuleTester;
+
+var ruleTester = new RuleTester();
 
 
 var valid = [
@@ -15,7 +16,7 @@ var valid = [
 ].map(function(code) {
   return {
     code: code,
-    args: [ 1, 'class', 'method' ],
+    options: [ 1, 'class', 'method' ],
     ecmaFeatures: { classes: true }
   };
 });
@@ -28,7 +29,7 @@ var invalidClass = [
 ].map(function(code) {
   return {
     code: code,
-    args: [ 1, 'class', 'method' ],
+    options: [ 1, 'class', 'method' ],
     ecmaFeatures: { classes: true },
     errors: [{ message: klass }]
   };
@@ -43,13 +44,13 @@ var invalidMethod = [
 ].map(function(code) {
   return {
     code: code,
-    args: [ 1, 'class', 'method' ],
+    options: [ 1, 'class', 'method' ],
     ecmaFeatures: { classes: true },
     errors: [{ message: method }]
   };
 });
 
-eslintTester.addRuleTest('./lib/rules/name', {
+ruleTester.run('classes/name', rule, {
   valid: valid,
   invalid: invalidClass.concat(invalidMethod)
 });
