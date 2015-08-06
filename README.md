@@ -7,7 +7,7 @@ custom ESLint rule, checks class style.
 
 ### space
 
-should be space between method name and parens.
+should no space between method name and parens.
 
 The following patterns are considered warnings:
 
