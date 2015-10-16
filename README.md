@@ -116,6 +116,58 @@ class Foo {
 }
 ```
 
+## super
+
+extended class should call `super()` at the top of constructor.
+
+The following patterns are considered warnings:
+
+The following patterns are not warnings:
+
+```js
+class Foo extends A {
+  bar() {
+  }
+}
+
+class Foo extends A {
+  constructor() {
+    this.bar();
+  }
+  bar() {
+  }
+}
+```
+
+```js
+class Foo extends A {
+  constructor() {
+    super();
+    this.a = 10;
+  }
+  bar() {
+  }
+}
+
+class Foo extends A {
+  bar() {
+  }
+  constructor() {
+    super();
+    this.a = 10;
+  }
+}
+
+class Foo extends A {
+  constructor() {
+    // comments
+    super();
+    this.a = 10;
+  }
+}
+```
+
+
 ## Usage
 
 ```yaml
@@ -126,6 +178,8 @@ rules:
   # Plugins
   classes/space  : 2
   classes/name   : [2, "class", "method"]
+  classes/constructor : 2
+  classes/super  : 2
 ```
 
 ## License
