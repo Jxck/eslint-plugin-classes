@@ -1,19 +1,22 @@
 "use strict";
 
-var rule = require("../../lib/rules/name"),
+const rule = require("../../lib/rules/name"),
     RuleTester = require("eslint").RuleTester;
 
-var ruleTester = new RuleTester();
+const ruleTester = new RuleTester();
 
 
-var valid = [
-    "class Foo {" +
-    "}          ",
-
-    "class Foo {" +
-    "  bar() {} " +
-    "}          "
-].map(function(code) {
+const valid = [
+    `
+    class Foo {
+    }
+    `,
+    `
+    class Foo {
+      bar() {}
+    }
+    `
+].map((code) => {
     return {
         code: code,
         options: [ 1, "class", "method" ],
@@ -21,12 +24,14 @@ var valid = [
     };
 });
 
-var klass = "class name should start with upper case.";
+const klass = "class name should start with upper case.";
 
-var invalidClass = [
-    "class foo {" +
-    "}          "
-].map(function(code) {
+const invalidClass = [
+    `
+    class foo {
+    }
+    `
+].map((code) => {
     return {
         code: code,
         options: [ 1, "class", "method" ],
@@ -35,13 +40,15 @@ var invalidClass = [
     };
 });
 
-var method = "method name should start with lower case.";
+const method = "method name should start with lower case.";
 
-var invalidMethod = [
-    "class Foo {" +
-    "  Bar(){}  " +
-    "}          "
-].map(function(code) {
+const invalidMethod = [
+    `
+    class Foo {
+      Bar(){}
+    }
+    `
+].map((code) => {
     return {
         code: code,
         options: [ 1, "class", "method" ],
