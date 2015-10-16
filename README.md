@@ -82,6 +82,40 @@ class Foo {
 }
 ```
 
+## constructor
+
+class should have constructor always even if empty body.
+
+The following patterns are considered warnings:
+
+```js
+class Foo {
+}
+
+class Foo {
+  bar() {
+  }
+}
+```
+
+The following patterns are not warnings:
+
+```js
+class Foo {
+  constructor() {
+    console.log('test');
+  }
+}
+
+class Foo {
+  constructor() {
+  }
+
+  bar() {
+  }
+}
+```
+
 ## Usage
 
 ```yaml
