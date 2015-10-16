@@ -8,6 +8,7 @@ extends:
 
 rules:
     indent: [2, 4, {SwitchCase: 1}]
+    block-spacing: 2
     brace-style: [2, "1tbs"]
     camelcase: [2, { properties: "never" }]
     callback-return: [2, ["cb", "callback", "next"]]
@@ -70,9 +71,11 @@ rules:
     no-unused-expressions: 2
     no-unused-vars: [2, {vars: "all", args: "after-used"}]
     no-use-before-define: 2
+    no-useless-concat: 2
     no-with: 2
     quotes: [2, "double"]
     radix: 2
+    require-jsdoc: 2
     semi: 2
     semi-spacing: [2, {before: false, after: true}]
     space-after-keywords: [2, "always"]
