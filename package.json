@@ -9,9 +9,9 @@
     "url": "https://github.com/Jxck/eslint-plugin-classes/issues"
   },
   "devDependencies": {
-    "eslint": "^1.0.0",
+    "eslint": "^1.6.0",
     "eslint-tester": "^0.8.2",
-    "mocha": "^2.2.5"
+    "mocha": "^2.3.3"
   },
   "homepage": "https://github.com/Jxck/eslint-plugin-classes",
   "keywords": [
@@ -24,7 +24,7 @@
   "license": "MIT",
   "main": "index.js",
   "peerDependencies": {
-    "eslint": ">=0.20.0"
+    "eslint": ">=1.0.0"
   },
   "repository": {
     "type": "git",
