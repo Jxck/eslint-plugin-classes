@@ -122,8 +122,6 @@ extended class should call `super()` at the top of constructor.
 
 The following patterns are considered warnings:
 
-The following patterns are not warnings:
-
 ```js
 class Foo extends A {
   bar() {
@@ -138,6 +136,8 @@ class Foo extends A {
   }
 }
 ```
+
+The following patterns are not warnings:
 
 ```js
 class Foo extends A {
@@ -169,8 +169,37 @@ class Foo extends A {
 
 ## Style
 
-TODO: order of method [static, constructor, instance]
+enforce order of definition of method in order of static method => constructor => instance methods.
 
+The following patterns are considered warnings:
+
+```js
+class Foo {
+    constructor() {}
+    static bar() {}
+}
+
+
+class Foo {
+    baz() {}
+    static bar() {}
+    constructor() {}
+    baz() {}
+}
+```
+
+The following patterns are not warnings:
+
+```js
+class Foo {
+    static bar() {}
+    static bal() {}
+    constructor() {}
+    baz() {}
+    biz() {}
+    bez() {}
+}
+```
 
 ## Usage
 
@@ -184,6 +213,7 @@ rules:
   classes/name   : [2, "class", "method"]
   classes/constructor : 2
   classes/super  : 2
+  classes/style  : 2
 ```
 
 ## License
