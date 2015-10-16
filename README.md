@@ -167,6 +167,10 @@ class Foo extends A {
 }
 ```
 
+## Style
+
+TODO: order of method [static, constructor, instance]
+
 
 ## Usage
 
