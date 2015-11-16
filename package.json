@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-classes",
   "description": "custom ESLint rule, ckecks class style.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "Jxck"
   },
